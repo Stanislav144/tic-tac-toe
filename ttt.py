@@ -24,7 +24,7 @@ def game():
 
     for i in range(10):
         printBoard(theBoard)
-        print("Выш ход," + turn + ".Move to which place?")
+        print("Выш ход," + turn + ".Куда поставить знак?")
 
         move = input()        
 
@@ -32,7 +32,7 @@ def game():
             theBoard[move] = turn
             count += 1
         else:
-            print("That place is already filled.\nMove to which place?")
+            print("Эта позиция уже занята.\nКуда поставить знак?")
             continue
 
         
@@ -40,48 +40,48 @@ def game():
             if theBoard['7'] == theBoard['8'] == theBoard['9'] != ' ': # across the top
                 printBoard(theBoard)
                 print("\nКонец игры.\n")                
-                print(" **** " +turn + " won. ****")                
+                print(" **** " +turn + " победа. ****")                
                 break
             elif theBoard['4'] == theBoard['5'] == theBoard['6'] != ' ': # across the middle
                 printBoard(theBoard)
                 print("\nКонец игры.\n")                
-                print(" **** " +turn + " won. ****")
+                print(" **** " +turn + " победа. ****")
                 break
             elif theBoard['1'] == theBoard['2'] == theBoard['3'] != ' ': # across the bottom
                 printBoard(theBoard)
                 print("\nКонец игры.\n")                
-                print(" **** " +turn + " won. ****")
+                print(" **** " +turn + " победа. ****")
                 break
             elif theBoard['1'] == theBoard['4'] == theBoard['7'] != ' ': # down the left side
                 printBoard(theBoard)
                 print("\nКонец игры.\n")                
-                print(" **** " +turn + " won. ****")
+                print(" **** " +turn + " победа. ****")
                 break
             elif theBoard['2'] == theBoard['5'] == theBoard['8'] != ' ': # down the middle
                 printBoard(theBoard)
                 print("\nКонец игры.\n")                
-                print(" **** " +turn + " won. ****")
+                print(" **** " +turn + " победа. ****")
                 break
             elif theBoard['3'] == theBoard['6'] == theBoard['9'] != ' ': # down the right side
                 printBoard(theBoard)
                 print("\nКонец игры.\n")                
-                print(" **** " +turn + " won. ****")
+                print(" **** " +turn + " победа. ****")
                 break 
             elif theBoard['7'] == theBoard['5'] == theBoard['3'] != ' ': # diagonal
                 printBoard(theBoard)
                 print("\nКонец игры.\n")                
-                print(" **** " +turn + " won. ****")
+                print(" **** " +turn + " победа. ****")
                 break
             elif theBoard['1'] == theBoard['5'] == theBoard['9'] != ' ': # diagonal
                 printBoard(theBoard)
                 print("\nКонец игры.\n")                
-                print(" **** " +turn + " won. ****")
+                print(" **** " +turn + " победа. ****")
                 break 
 
         
         if count == 9:
             print("\nКонец игры.\n")                
-            print("It's a Tie!!")
+            print("Ничья!!")
 
         
         if turn =='X':
@@ -90,7 +90,7 @@ def game():
             turn = 'X'        
     
     
-    restart = input("Do want to play Again?(y/n)")
+    restart = input("Хотите сыграть ещё раз?(y/n)")
     if restart == "y" or restart == "Y":  
         for key in board_keys:
             theBoard[key] = " "
